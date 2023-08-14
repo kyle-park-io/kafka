@@ -14,13 +14,13 @@
   file:
     path: "{{ dir_path }}"
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: download kafka from web
   get_url:
     url: https://archive.apache.org/dist/kafka/{{ kafkaversion }}/kafka_2.12-{{ kafkaversion }}.tgz
     dest: /opt/
-    mode: '0600'
+    mode: "0600"
 
 - name: unarchive kafka
   unarchive:
@@ -39,14 +39,14 @@
   template:
     src: server.properties.j2
     dest: /usr/local/kafka/config/server.properties
-    mode: '0644'
+    mode: "0644"
     backup: no
 
 - name: copy kafka conf file
   copy:
     src: "{{ item }}"
     dest: /usr/local/kafka/config/
-    mode: '0644'
+    mode: "0644"
     backup: no
   with_items:
     - jmx
@@ -58,7 +58,7 @@
     dest: /etc/systemd/system/
     owner: root
     group: root
-    mode: '0644'
+    mode: "0644"
     backup: no
   with_items:
     - kafka-server.service

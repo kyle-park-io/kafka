@@ -1,0 +1,17 @@
+# kafka-config.yaml
+name: 'kyle-kafka'
+# kafka enum : 6
+transport: 6
+options:
+  client:
+    clientId: 'kafka-client'
+    brokers:
+      - 'kyle-kafka-kafka01.foo.bar:9092'
+      - 'kyle-kafka-kafka02.foo.bar:9092'
+      - 'kyle-kafka-kafka03.foo.bar:9092'
+  consumer:
+    groupId: 'kakfa-consumer'
+  subscribe:
+    fromBeginning: true
+  run:
+    autoCommit: true
