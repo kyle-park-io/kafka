@@ -1,0 +1,9 @@
+[zkhosts]
+kyle-kafka-zk01.foo.bar
+kyle-kafka-zk02.foo.bar
+kyle-kafka-zk03.foo.bar
+
+[kafkahosts]
+kyle-kafka-kafka01.foo.bar
+kyle-kafka-kafka02.foo.bar
+kyle-kafka-kafka03.foo.bar
